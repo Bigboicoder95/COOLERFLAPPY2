@@ -121,7 +121,7 @@
         draw(ctx, xPos, n) {
             // Replaced fillRect with drawImage
             // Drawn at 30x30 to match original hitbox size
-            ctx.drawImage(birdImg, xPos, this.height, 30, 30);
+            ctx.drawImage(birdImg, xPos+5, this.height, 20, 20);
 
             // Keep text identifier to distinguish P1 vs P2
             ctx.fillStyle = "black";
