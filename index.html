@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java to JS Flappy Conversion</title>
+    <style>
+        body {
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: white;
+            font-family: monospace;
+            overflow: hidden;
+        }
+        canvas {
+            background-color: #000;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        #instructions {
+            position: absolute;
+            top: 10px;
+            text-align: center;
+            pointer-events: none;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="instructions">
+        <h2>Two Player Flappy</h2>
+        <p><strong>Player 1:</strong> Press "<strong>,</strong>" (Comma) to Jump</p>
+        <p><strong>Player 2:</strong> Press "<strong>t</strong>" to Jump</p>
+        <p>Press "<strong>r</strong>" to Reset</p>
+    </div>
+
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+<script src = "sketch.js">
+    
+
+</script>
+</body>
+</html>
