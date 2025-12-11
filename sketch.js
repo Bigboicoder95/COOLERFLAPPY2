@@ -40,7 +40,7 @@
     // Kept as original logic since no shadow image was provided
     class BirdShadow {
         constructor(spawnHeight) {
-            this.x = 120;
+            this.x = 80;
             this.height = spawnHeight;
             this.speed = 210;
             this.velocity = 0;
@@ -70,7 +70,7 @@
             }
 
             ctx.fillStyle = `rgb(${r},${g},${b})`;
-            ctx.fillRect(this.x+30, this.height, 30, 30);
+            ctx.fillRect(this.x, this.height, 30, 30);
             
             ctx.fillStyle = "black";
             ctx.font = "12px sans-serif";
@@ -121,7 +121,7 @@
         draw(ctx, xPos, n) {
             // Replaced fillRect with drawImage
             // Drawn at 30x30 to match original hitbox size
-            ctx.drawImage(birdImg, xPos+5, this.height, 20, 20);
+            ctx.drawImage(birdImg, xPos+5, this.height, 30, 30);
 
             // Keep text identifier to distinguish P1 vs P2
             ctx.fillStyle = "black";
