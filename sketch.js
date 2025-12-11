@@ -70,7 +70,7 @@
             }
 
             ctx.fillStyle = `rgb(${r},${g},${b})`;
-            ctx.fillRect(this.x, this.height, 30, 30);
+            ctx.fillRect(this.x+30, this.height, 20, 20);
             
             ctx.fillStyle = "black";
             ctx.font = "12px sans-serif";
