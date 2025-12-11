@@ -1,6 +1,12 @@
 // --- Load Images ---
     const birdImg = new Image();
     birdImg.src = 'bird.png';
+    
+    const bird2Img = new Image();
+    bird2Img.src = 'Adobe Express - file.png';
+    
+    const bird3Img = new Image();
+    bird3Img.src = 'blue.png';
 
     const topPipeImg = new Image();
     topPipeImg.src = 'top_pipe.png';
@@ -10,6 +16,11 @@
 
     const bgImg = new Image();
     bgImg.src = 'background.png';
+
+    let count = 0;
+
+
+    
 
     // --- Helper Functions ---
     function clamp(val, min, max) {
@@ -118,10 +129,10 @@
             // Keeps intensity logic for shadows/background reset
         }
 
-        draw(ctx, xPos, n) {
+        draw(ctx, xPos, n, image,x,y) {
             // Replaced fillRect with drawImage
             // Drawn at 30x30 to match original hitbox size
-            ctx.drawImage(birdImg, xPos+5, this.height, 30, 30);
+            ctx.drawImage(image, xPos+5, this.height, x, y);
 
             // Keep text identifier to distinguish P1 vs P2
             ctx.fillStyle = "black";
@@ -305,8 +316,8 @@
         });
 
         // Draw Birds
-        bir.draw(ctx, 100, 1);
-        bir2.draw(ctx, 100, 2);
+        bir.draw(ctx, 100, 1, birdImg, 35,30);
+        bir2.draw(ctx, 100, 2, bird2Img, 50, 50);
 
         // Draw Shadows (Original Logic)
         shadows.forEach(s => {
