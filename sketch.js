@@ -40,7 +40,7 @@
     // Kept as original logic since no shadow image was provided
     class BirdShadow {
         constructor(spawnHeight) {
-            this.x = 100;
+            this.x = 90;
             this.height = spawnHeight;
             this.speed = 210;
             this.velocity = 0;
