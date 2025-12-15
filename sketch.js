@@ -242,6 +242,10 @@
         gameOver = false;
         shadows = [];
         shadows2 = [];
+        if(count1 == 10 || count2 == 10){
+            count1 = 0;
+            count2 = 0;
+        }
     }
 
     let lastTime = 0;
@@ -350,10 +354,19 @@
             ctx.font = "bold 40px sans-serif";
             ctx.strokeStyle = "white";
             ctx.lineWidth = 4;
-            
+            if(count1<10 && count2<10){
             ctx.strokeText("GAME OVER", 280, 300);
             ctx.fillText("GAME OVER", 280, 300);
+            }
+            if (count1 == 10){
+            ctx.strokeText("PLAYER 1 WINS", 250, 300);
+            ctx.fillText("PLAYER 1 WINS", 250, 300);
+            }
             
+            if (count2 == 10){
+            ctx.strokeText("PLAYER 2 WINS", 250, 300);
+            ctx.fillText("PLAYER 2 WINS", 250, 300);
+            }
             ctx.font = "20px sans-serif";
             ctx.fillStyle = "white";
             ctx.fillText("Press 'r' to reset", 320, 340);
